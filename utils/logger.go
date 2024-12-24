@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"fmt"
@@ -9,6 +9,10 @@ type Logger struct {
 }
 
 var logger = Logger{}
+
+func GetLogger() *Logger {
+	return &logger
+}
 
 func (l *Logger) Info(message string) {
 	l.log("INFO", message)
