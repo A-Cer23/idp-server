@@ -22,9 +22,9 @@ func main() {
 
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
-	mux.HandleFunc("/", handlers.IndexHandler)
+	mux.HandleFunc("/", handlers.Error)
 
-	mux.HandleFunc("/signup", handlers.Signup)
+	mux.HandleFunc("/register", handlers.Register)
 
 	mux.HandleFunc("/login", handlers.Login)
 
