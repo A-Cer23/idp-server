@@ -14,6 +14,7 @@ func Register(w http.ResponseWriter, r *http.Request) {
 		htmlContent, _ := os.ReadFile("./html/register.html")
 		w.Write(htmlContent)
 	case "POST":
+		// store username and pass to db
 		w.Write([]byte("POST /register"))
 	}
 

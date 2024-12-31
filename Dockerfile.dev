@@ -1,0 +1,10 @@
+FROM golang:1.23.4-bookworm
+WORKDIR /app
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:$PATH
+COPY go.mod ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -o main .
+EXPOSE 2345
+CMD ["./main"]
