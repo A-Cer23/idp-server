@@ -12,6 +12,7 @@ type LoginRequest struct {
 }
 
 func Login(w http.ResponseWriter, r *http.Request) {
+	// TODO: only post requests
 	var loginRequest LoginRequest
 	decoder := json.NewDecoder(r.Body)
 	err := decoder.Decode(&loginRequest)

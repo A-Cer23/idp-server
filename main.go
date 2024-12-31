@@ -20,6 +20,7 @@ func main() {
 	logger := utils.GetLogger()
 
 	// // // // // // // // // // // // // // // // // // //
+	// TODO: TO BE MOVED TO SEPERATE FILE
 	logger.Info("Instantiating a connection to database")
 
 	db, err := sql.Open("postgres", "host=localhost port=5432 user=postgres password=postgres sslmode=disable")
